@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Mustafa%20Zahter&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Computer%20Engineering%20Student%20%26%20AI%20Enthusiast&descAlignY=55&descAlign=62" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Mustafa%20Zahter&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Computer%20Engineering%20Student%20and%20AI%20Enthusiast&descAlignY=55&descAlign=62" width="100%" />
 
   <h3>
     <a href="https://git.io/typing-svg">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=27F705&center=true&vCenter=true&width=435&lines=Building+AI+Technologies;Vice+President+of+HSD+Community;Content+Developer+@+Acrome;Deep+Learning+%26+Generative+AI" alt="Typing SVG" />
+      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=27F705&center=true&vCenter=true&width=435&lines=Building+AI+Technologies;Vice+President+of+HSD+Community;Content+Developer+@+Acrome;Deep+Learning+and+Generative+AI" alt="Typing SVG" />
     </a>
   </h3>
   
