@@ -8,24 +8,6 @@
 
 </div>
 
-<!-- GAME:START -->
-<div align="center">
-
-<img src="game/board.svg?v=0" width="100%" alt="commit//strike">
-
-<table>
-  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cleft&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° left"><kbd>&nbsp;↺&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfwd&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step forward"><kbd>&nbsp;⬆&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cright&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° right"><kbd>&nbsp;↻&nbsp;</kbd></a></td></tr>
-  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-left&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe left"><kbd>&nbsp;⇠&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cback&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step back"><kbd>&nbsp;⬇&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-right&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe right"><kbd>&nbsp;⇢&nbsp;</kbd></a></td></tr>
-  <tr><td align="center" colspan="3"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfire&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="fire"><kbd>&nbsp;🔫 FIRE&nbsp;</kbd></a></td></tr>
-</table>
-
-<sub><b>How it works:</b> click a key → GitHub opens a pre-filled issue → press <b>Submit new issue</b>. A GitHub Action plays your turn inside my contribution graph, my repos crawl closer, the board updates and your issue is closed (~30 s). +1 per action · +10 per merged repo · +30 for the exit portal.</sub>
-
-_No moves yet. The repos are waiting for you._
-
-</div>
-<!-- GAME:END -->
-
 <div align="center">
 
 <img src="dist/htop.svg" width="100%" alt="htop-style view of my GitHub: languages as CPU cores, public repos as processes">
@@ -43,7 +25,7 @@ _No moves yet. The repos are waiting for you._
 | 🟡 S | [`c-sharp-oop-masterclass`](https://github.com/mustafazahter/c-sharp-oop-masterclass) | TypeScript | 15 | 60d06h ago |
 | 🟡 S | [`algo-lab`](https://github.com/mustafazahter/algo-lab) | JavaScript | 15 | 84d00h ago |
 | ⚫ Z | [`gomulu-sistemler-ve-pic-programlama`](https://github.com/mustafazahter/gomulu-sistemler-ve-pic-programlama) | TypeScript | 11 | 160d10h ago |
-| 🟢 R | [`mustafazahter`](https://github.com/mustafazahter/mustafazahter) | - | 6 | 0h00m ago |
+| 🟢 R | [`mustafazahter`](https://github.com/mustafazahter/mustafazahter) | - | 7 | 0h00m ago |
 | ⚫ Z | [`bilgisayar-mimarisi-notlari`](https://github.com/mustafazahter/bilgisayar-mimarisi-notlari) | HTML | 3 | 359d08h ago |
 | 🟡 S | [`komuta-n8n-template`](https://github.com/mustafazahter/komuta-n8n-template) | Dockerfile | 0 | 77d05h ago |
 | ⚫ Z | [`circor_proje`](https://github.com/mustafazahter/circor_proje) | Jupyter Notebook | 0 | 567d06h ago |
@@ -83,6 +65,26 @@ _No moves yet. The repos are waiting for you._
 </p></details>
 </details>
 <!-- STACK:END -->
+
+<br>
+
+<!-- GAME:START -->
+<div align="center">
+
+<img src="game/board.svg?v=0" width="100%" alt="commit//strike">
+
+<table>
+  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cleft&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° left"><kbd>&nbsp;↺&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfwd&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step forward"><kbd>&nbsp;⬆&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cright&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° right"><kbd>&nbsp;↻&nbsp;</kbd></a></td></tr>
+  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-left&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe left"><kbd>&nbsp;⇠&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cback&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step back"><kbd>&nbsp;⬇&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-right&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe right"><kbd>&nbsp;⇢&nbsp;</kbd></a></td></tr>
+  <tr><td align="center" colspan="3"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfire&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="fire"><kbd>&nbsp;🔫 FIRE&nbsp;</kbd></a></td></tr>
+</table>
+
+<sub><b>How it works:</b> click a key → GitHub opens a pre-filled issue → press <b>Submit new issue</b>. A GitHub Action plays your turn inside my contribution graph, my repos crawl closer, the board updates and your issue is closed (~30 s). +1 per action · +10 per merged repo · +30 for the exit portal.</sub>
+
+_No moves yet. The repos are waiting for you._
+
+</div>
+<!-- GAME:END -->
 
 <div align="center">
 
