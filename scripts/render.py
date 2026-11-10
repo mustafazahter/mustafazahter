@@ -188,6 +188,27 @@ def morph_tracks(frames, yscale, radius=6.0):
                 t["pos"][f] = nearest(ref, vis)
     return tracks
 
+MOTION_GROUPS = 48
+# Per-glyph drift looks great but makes browsers repaint the dense portrait every
+# frame (profile page drops to ~20 fps). Off by default: the portrait stays still
+# and the life comes from particles peeling off its edges (cheap).
+GLYPH_DRIFT = os.environ.get("GLYPH_DRIFT") == "1"
+PARTICLES = 34
+
+def kmeans(vecs, items, k, rnd, iters=18):
+    """Tiny k-means: returns [(centroid, [items])]."""
+    k = min(k, len(vecs))
+    cents = [list(v) for v in rnd.sample(vecs, k)]
+    for _ in range(iters):
+        buckets = [[] for _ in range(k)]
+        for v, it in zip(vecs, items):
+            c = min(range(k), key=lambda q: sum((a - b) ** 2 for a, b in zip(v, cents[q])))
+            buckets[c].append((v, it))
+        for q, bk in enumerate(buckets):
+            if bk:
+                cents[q] = [sum(v[d] for v, _ in bk) / len(bk) for d in range(len(vecs[0]))]
+    return [(cents[q], [it for _, it in bk]) for q, bk in enumerate(buckets) if bk]
+
 # ── card ─────────────────────────────────────────────────────────────
 def render(s):
     pj = json.load(open(os.path.join(ROOT, "assets", "portrait.json")))
@@ -195,7 +216,7 @@ def render(s):
     mz = json.load(open(os.path.join(ROOT, "assets", "mz.json")))
     rnd = random.Random(42)
     W, H = 940, 640
-    defs, body = [], []
+    defs, body, anim = [], [], []
 
     css = [
         ".o{opacity:0;animation:on .01s forwards}@keyframes on{to{opacity:1}}",
@@ -274,23 +295,55 @@ def render(s):
         x = (mj - ja0) * cw_ + vj / n * push + rnd.uniform(-3, 3)
         y = (mi - ia0) * lh_ + vi / n * push * 0.6 + rnd.uniform(-2.5, 2.5)
         return x, y
-    by_row, extra = {}, []
+    by_row, extra, still, moving = {}, [], {}, []
     for tr in tracks:
         (i0, j0), (i1, j1), (i2, j2) = tr["pos"]
+        if not GLYPH_DRIFT:
+            if tr["op"][0]:
+                still.setdefault(i0, {})[j0] = (tr["ch"], tr["lv"])
+            continue
+        if tr["op"] == [1, 1, 1] and (i0, j0) == (i1, j1) == (i2, j2):
+            still.setdefault(i0, {})[j0] = (tr["ch"], tr["lv"])
+            continue
         ia0, ja0 = i0, j0
-        o = tr["op"]
         ax, ay = detour((i0, j0), (i1, j1))
         bx, by = detour((i1, j1), (i2, j2))
         cx, cy = detour((i2, j2), (i0, j0))
-        style = (f'--x1:{(j1 - j0) * cw_:.0f}px;--y1:{(i1 - i0) * lh_:.0f}px;--x2:{(j2 - j0) * cw_:.0f}px;--y2:{(i2 - i0) * lh_:.0f}px;'
-                 f'--ax:{ax:.0f}px;--ay:{ay:.0f}px;--bx:{bx:.0f}px;--by:{by:.0f}px;--cx:{cx:.0f}px;--cy:{cy:.0f}px;'
-                 f'--o0:{o[0]};--o1:{o[1]};--o2:{o[2]};animation-delay:{-rnd.uniform(0, 30):.2f}s')
-        el = (f'<text x="{px + j0 * cw_:.1f}" y="{py + i0 * lh_:.1f}" class="mv t{tr["lv"]}" style="{style}">{escape(tr["ch"], False)}</text>')
-        (by_row.setdefault(i0, []) if o[0] else extra).append(el)
-    face = [f'<g class="o" style="animation-delay:{tshow:.2f}s">{"".join(by_row.get(i, []))}</g>' for i, y, tshow, r in rows_svg]
-    face.append(f'<g class="o" style="animation-delay:{S0:.2f}s">{"".join(extra)}</g>')
+        vec = (ax, ay, (j1 - j0) * cw_, (i1 - i0) * lh_, bx, by, (j2 - j0) * cw_, (i2 - i0) * lh_, cx, cy)
+        moving.append({"i": i0, "j": j0, "ch": tr["ch"], "lv": tr["lv"], "op": tuple(tr["op"]), "v": vec})
+
+    # Browsers pay per running animation, not per pixel moved, so glyphs whose paths
+    # look alike share one animated group (k-means on the 10-D path). Neighbours land
+    # in different groups, so the drift still reads as individual and organic.
+    row_delay = {i: tshow for i, y, tshow, r in rows_svg}
+    groups = []
+    by_op = {}
+    for g_ in moving:
+        by_op.setdefault(g_["op"], []).append(g_)
+    for op, items in by_op.items():
+        k = max(1, round(MOTION_GROUPS * len(items) / max(1, len(moving))))
+        for cent, members in kmeans([m["v"] for m in items], items, k, rnd):
+            groups.append((op, cent, members))
+    for op, c, members in groups:
+        style = (f'--ax:{c[0]:.0f}px;--ay:{c[1]:.0f}px;--x1:{c[2]:.0f}px;--y1:{c[3]:.0f}px;--bx:{c[4]:.0f}px;--by:{c[5]:.0f}px;'
+                 f'--x2:{c[6]:.0f}px;--y2:{c[7]:.0f}px;--cx:{c[8]:.0f}px;--cy:{c[9]:.0f}px;'
+                 f'--o0:{op[0]};--o1:{op[1]};--o2:{op[2]};animation-delay:{-rnd.uniform(0, 30):.2f}s')
+        els = "".join(f'<text x="{px + m["j"] * cw_:.1f}" y="{py + m["i"] * lh_:.1f}" class="o t{m["lv"]}" '
+                      f'style="animation-delay:{(row_delay.get(m["i"], S0) if op[0] else S0):.2f}s">{escape(m["ch"], False)}</text>'
+                      for m in members)
+        extra.append(f'<g class="mv" style="{style}">{els}</g>')
+    def still_row(i, y):
+        cells = still.get(i)
+        if not cells:
+            return ""
+        n = max(cells) + 1
+        t_ = "".join(cells[j][0] if j in cells else " " for j in range(n))
+        l_ = "".join(str(cells[j][1]) if j in cells else "0" for j in range(n))
+        return f'<text x="{px:.1f}" y="{y:.1f}" xml:space="preserve">{shade_spans(t_, l_)}</text>'
+    face = [f'<g class="o" style="animation-delay:{tshow:.2f}s">{still_row(i, y)}{"".join(by_row.get(i, []))}</g>' for i, y, tshow, r in rows_svg]
+    face.append("".join(extra))
     # outside the glow filter: re-filtering 1.5k moving glyphs every frame makes browsers stutter/blur
-    body.append(f'</g><g id="face" font-size="{pfs}">{"".join(face)}</g><g filter="url(#glow)">')
+    anim.append(f'<g id="face" font-size="{pfs}">{"".join(face)}</g>')
     # particles that peel off the figure and drift up/out forever
     css.append(".pt{opacity:0;animation:pt linear infinite}@keyframes pt{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),-46px)}}")
     edges = []
@@ -299,10 +352,10 @@ def render(s):
         if t_.strip():
             a, b_ = len(t_) - len(t_.lstrip()), len(t_.rstrip())
             edges += [(a, i, -1), (b_, i, 1)]
-    for k in range(34):
+    for k in range(PARTICLES):
         c, i, side = rnd.choice(edges)
         dx = side * rnd.randint(8, 40)
-        body.append(f'<text x="{px + c * pfs * CW:.1f}" y="{py + i * plh:.1f}" font-size="{pfs + 1}" class="pt t{rnd.choice((3, 4, 5))}" '
+        anim.append(f'<text x="{px + c * pfs * CW:.1f}" y="{py + i * plh:.1f}" font-size="{pfs + 1}" class="pt t{rnd.choice((3, 4, 5))}" '
                     f'style="--dx:{dx}px;animation-duration:{rnd.uniform(3, 7):.1f}s;animation-delay:{t_face + rnd.uniform(0, 6):.1f}s">{rnd.choice(".:·*+`")}</text>')
     cap_y = py + len(portrait) * plh + 14
     body.append(f'<text x="{px + pw:.1f}" y="{cap_y:.1f}" font-size="10" text-anchor="end" class="o m" style="animation-delay:{t_face:.2f}s">fig.1 — operator.ascii ({pcols}×{len(portrait)})</text>')
@@ -320,7 +373,7 @@ def render(s):
     lines = []
     for k, fr in enumerate(mz):
         lines += [f'<tspan x="{mx}" y="{my + k * FH + r * mlh:.1f}">{escape(l, False)}</tspan>' for r, l in enumerate(fr) if l]
-    body.append(f'<g class="fade" style="animation-delay:{t0:.2f}s" clip-path="url(#{cid})"><g class="strip">'
+    anim.append(f'<g class="fade" style="animation-delay:{t0:.2f}s" clip-path="url(#{cid})"><g class="strip">'
                 f'<text font-size="{mfs}" class="g" xml:space="preserve">{"".join(lines)}</text></g></g>')
 
     # 4 · live numbers beside the logo
@@ -368,12 +421,12 @@ def render(s):
     leg = "".join(f'<tspan class="h{i}">{c}</tspan> ' for i, c in enumerate(chars))
     body.append(f'<text x="{lx:.0f}" y="{gy + 20}" font-size="10" class="fade d" style="animation-delay:{t + 1.7:.2f}s" xml:space="preserve">less {leg}more</text>')
     body.append(f'<text x="{lx:.0f}" y="{gy + 40}" font-size="10" class="fade d" style="animation-delay:{t + 1.9:.2f}s">updated {datetime.now(timezone.utc):%Y-%m-%d} · auto</text>')
-    body.append(f'<rect x="{lx:.0f}" y="{gy + 50}" width="8" height="2" class="g cur"/>')
+    anim.append(f'<rect x="{lx:.0f}" y="{gy + 50}" width="8" height="2" class="g cur"/>')
     body.append("</g>")
+    body += anim
 
     # CRT overlay
     body += [f'<rect width="{W}" height="{H}" rx="14" fill="url(#scan)"/>',
-             f'<g clip-path="url(#card)"><rect class="roll" width="{W}" height="70" fill="#39ff7a" opacity=".035"/></g>',
              f'<rect width="{W}" height="{H}" rx="14" fill="url(#vig)"/>']
 
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '

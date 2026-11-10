@@ -104,7 +104,7 @@ BASE_CSS = (
 )
 
 
-def frame(W, H, title, defs, body, css=""):
+def frame(W, H, title, defs, body, css="", anim=()):
     defs = [
         '<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".28"/></pattern>',
         '<filter id="glow" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>',
@@ -115,8 +115,7 @@ def frame(W, H, title, defs, body, css=""):
             '<circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>',
             f'<text x="{W / 2}" y="23" font-size="12" text-anchor="middle" class="d">{escape(title)}</text>',
             '<g filter="url(#glow)">']
-    tail = ['</g>', f'<rect width="{W}" height="{H}" rx="14" fill="url(#scan)"/>',
-            f'<g clip-path="url(#card)"><rect class="roll" width="{W}" height="70" fill="#39ff7a" opacity=".03"/></g>',
+    tail = ['</g>', *anim, f'<rect width="{W}" height="{H}" rx="14" fill="url(#scan)"/>',
             f'<rect width="{W}" height="{H}" rx="14" fill="url(#vig)"/>']
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">'
             f'<style>{BASE_CSS}{css}</style><defs>{"".join(defs)}</defs>{"".join(head + body + tail)}</svg>')
@@ -151,7 +150,7 @@ def htop(d):
         col = "g" if pct < .35 else "a" if pct < .5 else "r"
         body.append(f'<text x="24" y="{y}" font-size="{fs}" class="o c" style="animation-delay:{t + i * .08:.2f}s" xml:space="preserve">{i + 1:>2}<tspan class="w">[</tspan></text>')
         body.append(f'<text x="{24 + 3 * cw:.1f}" y="{y}" font-size="{fs}" class="bar {col}" style="animation-delay:{t + i * .08:.2f}s" xml:space="preserve">'
-                    f'<tspan class="jit" style="animation-delay:{rnd.uniform(0, 2):.1f}s">{"|" * n}</tspan></text>')
+                    f'{"|" * n}</text>')
         body.append(f'<text x="{24 + (3 + bars) * cw:.1f}" y="{y}" font-size="{fs}" class="o" style="animation-delay:{t + i * .08:.2f}s" xml:space="preserve">'
                     f'<tspan class="d">{escape(name[:10]):>10} {pct * 100:4.1f}%</tspan><tspan class="w">]</tspan></text>')
 
@@ -197,15 +196,17 @@ def htop(d):
     if rows_y:
         n = len(rows_y)
         vals = ";".join(f"{y - 13}" for y in rows_y + rows_y[-2:0:-1])
-        body.insert(len(body) - n, f'<rect x="16" y="{rows_y[0] - 13}" width="{W - 32}" height="17" fill="#39ff7a" fill-opacity=".13" stroke="#39ff7a" stroke-opacity=".35" class="o" style="animation-delay:{t + 1.5:.2f}s">'
+        sel = (f'<rect x="16" y="{rows_y[0] - 13}" width="{W - 32}" height="17" fill="#39ff7a" fill-opacity=".13" stroke="#39ff7a" stroke-opacity=".35" class="o" style="animation-delay:{t + 1.5:.2f}s">'
                                    f'<animate attributeName="y" values="{vals}" dur="{(2 * n - 2) * 0.9:.1f}s" begin="{t + 1.5:.2f}s" repeatCount="indefinite" calcMode="discrete"/></rect>')
+    else:
+        sel = ''
     fy = H - 18
     keys = [("F1", "Help"), ("F2", "Hire"), ("F3", "Search"), ("F5", "Tree"), ("F6", "SortBy"), ("F9", "Kill bug"), ("F10", "Quit")]
     x = 16
     for k, v in keys:
         body.append(f'<text x="{x}" y="{fy}" font-size="{fs}" xml:space="preserve"><tspan class="w">{k}</tspan><tspan class="d" style="font-weight:700">{v:<9}</tspan></text>')
         x += (len(k) + 9) * cw + 6
-    return frame(W, H, "htop — mustafa@zahter", defs, body, "".join(css))
+    return frame(W, H, "htop — mustafa@zahter", defs, body, "".join(css), [sel])
 
 
 def stack():
@@ -225,8 +226,8 @@ def stack():
             continue
         dd, bb, t = typed(24, 92 + i * 22, l, t + .05, fs, "g", cps=140)
         defs.append(dd); body.append(bb)
-    body.append(f'<rect x="24" y="{92 + len(lines) * 22 - 8}" width="8" height="2" class="g cur"/>')
-    return frame(W, H, "zsh — ~/stack", defs, body)
+    cur = f'<rect x="24" y="{92 + len(lines) * 22 - 8}" width="8" height="2" class="g cur"/>'
+    return frame(W, H, "zsh — ~/stack", defs, body, anim=[cur])
 
 
 BUTTONS = [  # (file, label, accent)
@@ -253,7 +254,7 @@ def button(label, accent, i):
             f'<rect class="r" x="1" y="1" width="{W - 2}" height="{H - 2}" rx="9" fill="none" stroke="{accent}" stroke-opacity=".45" stroke-width="1.5"/>'
             f'<g filter="url(#g)"><text x="16" y="27" font-size="13"><tspan fill="#7d8590">$ open </tspan>'
             f'<tspan fill="{accent}" font-weight="700">{escape(label)}</tspan></text>'
-            f'<rect class="c" x="{16 + (7 + len(label)) * 13 * CW + 3:.0f}" y="17" width="7" height="13" fill="{accent}" opacity=".85"/></g></svg>')
+            f'</g><rect class="c" x="{16 + (7 + len(label)) * 13 * CW + 3:.0f}" y="17" width="7" height="13" fill="{accent}" opacity=".85"/></svg>')
 
 
 def badge(name):
