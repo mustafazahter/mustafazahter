@@ -1,78 +1,93 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Mustafa%20Zahter&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Computer%20Engineering%20Student%20and%20AI%20Enthusiast&descAlignY=55&descAlign=62" width="100%" />
 
-  <h3>
-    <a href="https://git.io/typing-svg">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=27F705&center=true&vCenter=true&width=435&lines=Building+AI+Technologies;Vice+President+of+HSD+Community;Content+Developer+@+Acrome;Deep+Learning+and+Generative+AI" alt="Typing SVG" />
-    </a>
-  </h3>
-  
-  <p>
-    <a href="https://linkedin.com/in/mustafazahter" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-    </a>
-    <a href="mailto:mustafaagzahter@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-    </a>
-    <a href="https://instagram.com/mustafa.zahter" target="_blank">
-      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-    </a>
-  </p>
-</div>
+<img src="dist/terminal.svg" width="100%" alt="mustafa@zahter — animated ASCII terminal profile: a self-decoding portrait, a spinning 3D MZ and live GitHub stats">
 
----
+<br>
 
-### 👨‍💻 About Me
-
-- 🎓 I am a **3rd-year Computer Engineering Student**.
-- 🚀 **Vice President** of the HSD Community.
-- 💼 **Content Developer** @ Acrome Robotik (2+ Years).
-- 🌱 Currently focusing on **Deep Learning, Generative AI**.
-- 💡 Passionate about **AI technologies, Software Development, and Community Building**.
-
----
-
-### 🛠️ Tech Stack & Tools
-
-<div align="center">
-
-| **AI & Data Science** | **Languages** |
-| :---: | :---: |
-| <a href="https://pytorch.org/" target="_blank"><img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" /></a> <a href="https://www.tensorflow.org/" target="_blank"><img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" /></a> <a href="https://opencv.org/" target="_blank"><img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" /></a> <a href="https://pandas.pydata.org/" target="_blank"><img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" /></a> <a href="https://www.mathworks.com/" target="_blank"><img src="https://img.shields.io/badge/MATLAB-%23D14836.svg?style=for-the-badge&logo=mathworks&logoColor=white" /></a> <a href="https://www.python.org/" target="_blank"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" /></a> | <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" /></a> <a href="https://isocpp.org/" target="_blank"><img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" /></a> <a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank"><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" /></a> <a href="https://www.java.com/" target="_blank"><img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" /></a> <a href="https://dart.dev/" target="_blank"><img src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" /></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" /></a> <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" /></a> <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://img.shields.io/badge/GNU%20Bash-%234EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" /></a> |
-
-| **Web & Mobile** | **Tools & Cloud** | **Databases** |
-| :---: | :---: | :---: |
-| <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" /></a> <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" /></a> <a href="https://nodejs.org/" target="_blank"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" /></a> <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" /></a> <a href="https://flutter.dev/" target="_blank"><img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" /></a> <a href="https://html.com/" target="_blank"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" /></a> <a href="https://css-tricks.com/" target="_blank"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" /></a> <a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" /></a> | <a href="https://www.docker.com/" target="_blank"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" /></a> <a href="https://git-scm.com/" target="_blank"><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" /></a> <a href="https://www.linux.org/" target="_blank"><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" /></a> <a href="https://cloud.google.com/" target="_blank"><img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" /></a> <a href="https://firebase.google.com/" target="_blank"><img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" /></a> <a href="https://www.figma.com/" target="_blank"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" /></a> <a href="https://unity.com/" target="_blank"><img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" /></a> <a href="https://www.adobe.com/products/photoshop.html" target="_blank"><img src="https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white" /></a> <a href="https://helpx.adobe.com/xd/get-started.html" target="_blank"><img src="https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6" /></a> | <a href="https://www.postgresql.org/" target="_blank"><img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" /></a> <a href="https://www.mysql.com/" target="_blank"><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" /></a> <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" /></a> <a href="https://www.sqlite.org/" target="_blank"><img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" /></a> |
+<a href="https://komuta.io"><img src="dist/btn-komuta.svg" width="180" alt="komuta.io"></a> <a href="https://linkedin.com/in/mustafazahter"><img src="dist/btn-linkedin.svg" width="180" alt="LinkedIn"></a> <a href="mailto:mustafaagzahter@gmail.com"><img src="dist/btn-mail.svg" width="180" alt="Mail"></a> <a href="https://instagram.com/mustafa.zahter"><img src="dist/btn-instagram.svg" width="180" alt="Instagram"></a>
 
 </div>
 
----
+<!-- GAME:START -->
+<div align="center">
 
-### 📈 GitHub Stats
+<img src="game/board.svg?v=0" width="100%" alt="commit//strike">
+
+<table>
+  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cleft&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° left"><kbd>&nbsp;↺&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfwd&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step forward"><kbd>&nbsp;⬆&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cright&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° right"><kbd>&nbsp;↻&nbsp;</kbd></a></td></tr>
+  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-left&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe left"><kbd>&nbsp;⇠&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cback&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step back"><kbd>&nbsp;⬇&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-right&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe right"><kbd>&nbsp;⇢&nbsp;</kbd></a></td></tr>
+  <tr><td align="center" colspan="3"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfire&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="fire"><kbd>&nbsp;🔫 FIRE&nbsp;</kbd></a></td></tr>
+</table>
+
+<sub><b>How it works:</b> click a key → GitHub opens a pre-filled issue → press <b>Submit new issue</b>. A GitHub Action plays your turn inside my contribution graph, my repos crawl closer, the board updates and your issue is closed (~30 s). +1 per action · +10 per merged repo · +30 for the exit portal.</sub>
+
+_No moves yet. The repos are waiting for you._
+
+</div>
+<!-- GAME:END -->
 
 <div align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mustafazahter&theme=github_dark" alt="Profile Details" />
-  <br/>
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=mustafazahter&theme=github_dark" alt="Stats" />
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mustafazahter&theme=github_dark" alt="Languages" />
+
+<img src="dist/htop.svg" width="100%" alt="htop-style view of my GitHub: languages as CPU cores, public repos as processes">
+
 </div>
 
-<br/>
+<!-- PROCS:START -->
+<details><summary><code>▸ ps aux</code> — open a process (public repos)</summary><br>
+
+| state | repo | lang | commits (12 mo) | last push |
+|:-:|---|---|--:|--:|
+| ⚫ Z | [`hsd-mtu-site`](https://github.com/mustafazahter/hsd-mtu-site) | TypeScript | 66 | 203d02h ago |
+| ⚫ Z | [`VectorTwin`](https://github.com/mustafazahter/VectorTwin) | Python | 38 | 105d02h ago |
+| ⚫ Z | [`ai-cv-maker`](https://github.com/mustafazahter/ai-cv-maker) | TypeScript | 34 | 263d03h ago |
+| 🟡 S | [`c-sharp-oop-masterclass`](https://github.com/mustafazahter/c-sharp-oop-masterclass) | TypeScript | 15 | 60d06h ago |
+| 🟡 S | [`algo-lab`](https://github.com/mustafazahter/algo-lab) | JavaScript | 15 | 84d00h ago |
+| ⚫ Z | [`gomulu-sistemler-ve-pic-programlama`](https://github.com/mustafazahter/gomulu-sistemler-ve-pic-programlama) | TypeScript | 11 | 160d10h ago |
+| 🟢 R | [`mustafazahter`](https://github.com/mustafazahter/mustafazahter) | - | 6 | 16h10m ago |
+| ⚫ Z | [`bilgisayar-mimarisi-notlari`](https://github.com/mustafazahter/bilgisayar-mimarisi-notlari) | HTML | 3 | 359d08h ago |
+| 🟡 S | [`komuta-n8n-template`](https://github.com/mustafazahter/komuta-n8n-template) | Dockerfile | 0 | 77d05h ago |
+| ⚫ Z | [`circor_proje`](https://github.com/mustafazahter/circor_proje) | Jupyter Notebook | 0 | 567d06h ago |
+| ⚫ Z | [`disease-diagnosis-with-heart-sound`](https://github.com/mustafazahter/disease-diagnosis-with-heart-sound) | Python | 0 | 571d02h ago |
+| ⚫ Z | [`deneme`](https://github.com/mustafazahter/deneme) | - | 0 | 949d12h ago |
+| ⚫ Z | [`android`](https://github.com/mustafazahter/android) | - | 0 | 3711d03h ago |
+
+</details>
+<!-- PROCS:END -->
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mustafazahter&theme=react-dark&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&area=true&hide_border=true" width="100%" alt="Activity Graph" />
+
+<img src="dist/stack.svg" width="100%" alt="tree ~/stack">
+
 </div>
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=mustafazahter&style=flat-square&color=blueviolet" alt="" />
-</div>
+<!-- STACK:START -->
+<details><summary><code>▸ ls ~/stack</code> — click a folder to open it</summary><br>
 
-<br />
+<details><summary><code>📁 ai/</code> <sub>5 tools</sub></summary><p>
+<a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-0c140e?style=for-the-badge&logo=pytorch&logoColor=39ff7a&labelColor=0c140e" alt="PyTorch"></a> <a href="https://www.tensorflow.org"><img src="https://img.shields.io/badge/TensorFlow-0c140e?style=for-the-badge&logo=tensorflow&logoColor=39ff7a&labelColor=0c140e" alt="TensorFlow"></a> <a href="https://opencv.org"><img src="https://img.shields.io/badge/OpenCV-0c140e?style=for-the-badge&logo=opencv&logoColor=39ff7a&labelColor=0c140e" alt="OpenCV"></a> <a href="https://pandas.pydata.org"><img src="https://img.shields.io/badge/pandas-0c140e?style=for-the-badge&logo=pandas&logoColor=39ff7a&labelColor=0c140e" alt="pandas"></a> <a href="https://www.mathworks.com"><img src="https://img.shields.io/badge/MATLAB-0c140e?style=for-the-badge&logo=mathworks&logoColor=39ff7a&labelColor=0c140e" alt="MATLAB"></a>
+</p></details>
+<details><summary><code>📁 lang/</code> <sub>9 tools</sub></summary><p>
+<a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-0c140e?style=for-the-badge&logo=python&logoColor=39ff7a&labelColor=0c140e" alt="Python"></a> <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-0c140e?style=for-the-badge&logo=typescript&logoColor=39ff7a&labelColor=0c140e" alt="TypeScript"></a> <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-0c140e?style=for-the-badge&logo=javascript&logoColor=39ff7a&labelColor=0c140e" alt="JavaScript"></a> <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="https://img.shields.io/badge/C-0c140e?style=for-the-badge&logo=c&logoColor=39ff7a&labelColor=0c140e" alt="C"></a> <a href="https://isocpp.org"><img src="https://img.shields.io/badge/C%2B%2B-0c140e?style=for-the-badge&logo=cplusplus&logoColor=39ff7a&labelColor=0c140e" alt="C++"></a> <a href="https://learn.microsoft.com/dotnet/csharp"><img src="https://img.shields.io/badge/C%23-0c140e?style=for-the-badge&logo=dotnet&logoColor=39ff7a&labelColor=0c140e" alt="C#"></a> <a href="https://www.java.com"><img src="https://img.shields.io/badge/Java-0c140e?style=for-the-badge&logo=openjdk&logoColor=39ff7a&labelColor=0c140e" alt="Java"></a> <a href="https://dart.dev"><img src="https://img.shields.io/badge/Dart-0c140e?style=for-the-badge&logo=dart&logoColor=39ff7a&labelColor=0c140e" alt="Dart"></a> <a href="https://www.gnu.org/software/bash"><img src="https://img.shields.io/badge/Bash-0c140e?style=for-the-badge&logo=gnubash&logoColor=39ff7a&labelColor=0c140e" alt="Bash"></a>
+</p></details>
+<details><summary><code>📁 web+mobile/</code> <sub>6 tools</sub></summary><p>
+<a href="https://react.dev"><img src="https://img.shields.io/badge/React-0c140e?style=for-the-badge&logo=react&logoColor=39ff7a&labelColor=0c140e" alt="React"></a> <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-0c140e?style=for-the-badge&logo=nextdotjs&logoColor=39ff7a&labelColor=0c140e" alt="Next.js"></a> <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-0c140e?style=for-the-badge&logo=nodedotjs&logoColor=39ff7a&labelColor=0c140e" alt="Node.js"></a> <a href="https://www.djangoproject.com"><img src="https://img.shields.io/badge/Django-0c140e?style=for-the-badge&logo=django&logoColor=39ff7a&labelColor=0c140e" alt="Django"></a> <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Flutter-0c140e?style=for-the-badge&logo=flutter&logoColor=39ff7a&labelColor=0c140e" alt="Flutter"></a> <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind-0c140e?style=for-the-badge&logo=tailwindcss&logoColor=39ff7a&labelColor=0c140e" alt="Tailwind"></a>
+</p></details>
+<details><summary><code>📁 cloud+ops/</code> <sub>6 tools</sub></summary><p>
+<a href="https://komuta.io"><img src="https://img.shields.io/badge/Komuta-0c140e?style=for-the-badge&logo=rocket&logoColor=4d8dff&labelColor=0c140e" alt="Komuta"></a> <a href="https://www.docker.com"><img src="https://img.shields.io/badge/Docker-0c140e?style=for-the-badge&logo=docker&logoColor=39ff7a&labelColor=0c140e" alt="Docker"></a> <a href="https://www.linux.org"><img src="https://img.shields.io/badge/Linux-0c140e?style=for-the-badge&logo=linux&logoColor=39ff7a&labelColor=0c140e" alt="Linux"></a> <a href="https://git-scm.com"><img src="https://img.shields.io/badge/Git-0c140e?style=for-the-badge&logo=git&logoColor=39ff7a&labelColor=0c140e" alt="Git"></a> <a href="https://cloud.google.com"><img src="https://img.shields.io/badge/Google%20Cloud-0c140e?style=for-the-badge&logo=googlecloud&logoColor=39ff7a&labelColor=0c140e" alt="Google Cloud"></a> <a href="https://firebase.google.com"><img src="https://img.shields.io/badge/Firebase-0c140e?style=for-the-badge&logo=firebase&logoColor=39ff7a&labelColor=0c140e" alt="Firebase"></a>
+</p></details>
+<details><summary><code>📁 data/</code> <sub>4 tools</sub></summary><p>
+<a href="https://www.postgresql.org"><img src="https://img.shields.io/badge/PostgreSQL-0c140e?style=for-the-badge&logo=postgresql&logoColor=39ff7a&labelColor=0c140e" alt="PostgreSQL"></a> <a href="https://www.mysql.com"><img src="https://img.shields.io/badge/MySQL-0c140e?style=for-the-badge&logo=mysql&logoColor=39ff7a&labelColor=0c140e" alt="MySQL"></a> <a href="https://www.mongodb.com"><img src="https://img.shields.io/badge/MongoDB-0c140e?style=for-the-badge&logo=mongodb&logoColor=39ff7a&labelColor=0c140e" alt="MongoDB"></a> <a href="https://www.sqlite.org"><img src="https://img.shields.io/badge/SQLite-0c140e?style=for-the-badge&logo=sqlite&logoColor=39ff7a&labelColor=0c140e" alt="SQLite"></a>
+</p></details>
+<details><summary><code>📁 design/</code> <sub>4 tools</sub></summary><p>
+<a href="https://www.figma.com"><img src="https://img.shields.io/badge/Figma-0c140e?style=for-the-badge&logo=figma&logoColor=39ff7a&labelColor=0c140e" alt="Figma"></a> <a href="https://unity.com"><img src="https://img.shields.io/badge/Unity-0c140e?style=for-the-badge&logo=unity&logoColor=39ff7a&labelColor=0c140e" alt="Unity"></a> <a href="https://www.adobe.com/products/photoshop.html"><img src="https://img.shields.io/badge/Photoshop-0c140e?style=for-the-badge&logo=adobephotoshop&logoColor=39ff7a&labelColor=0c140e" alt="Photoshop"></a> <a href="https://helpx.adobe.com/xd/get-started.html"><img src="https://img.shields.io/badge/Adobe%20XD-0c140e?style=for-the-badge&logo=adobexd&logoColor=39ff7a&labelColor=0c140e" alt="Adobe XD"></a>
+</p></details>
+</details>
+<!-- STACK:END -->
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mustafazahter/mustafazahter/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mustafazahter/mustafazahter/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/mustafazahter/mustafazahter/output/github-contribution-grid-snake.svg">
-  </picture>
+
+<sub><code>$ crontab -l</code> → this page re-renders itself every day from the GitHub API · plain SVG + CSS, zero JavaScript · <a href="scripts">source</a></sub>
+
+<img src="https://komarev.com/ghpvc/?username=mustafazahter&style=flat-square&color=1f9e4a&label=visitors" alt="visitors">
+
 </div>

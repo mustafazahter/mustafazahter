@@ -1,0 +1,66 @@
+name: commit//strike
+
+# One issue titled `strike|<action>` = one turn of the shared game on the profile README.
+on:
+  issues:
+    types: [opened]
+
+# No concurrency group on purpose: GitHub would cancel queued turns in a burst.
+# Turns are serialised by the push/replay loop below instead (optimistic locking on git).
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'strike|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # User-controlled fields only ever travel through env, never into the script text.
+      - name: play the turn, commit, push (replays on a fresh tree if someone pushed first)
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          BRANCH: ${{ github.event.repository.default_branch }}
+          RESULT_FILE: ${{ runner.temp }}/result.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            git fetch --quiet origin "$BRANCH"
+            git reset --quiet --hard "origin/$BRANCH"
+            python3 scripts/game.py --play
+            git add game README.md
+            if git diff --cached --quiet; then
+              echo "nothing to commit (invalid title?)"
+              exit 0
+            fi
+            git commit --quiet -m "commit//strike: turn from issue #$ISSUE_NUMBER"
+            if git push --quiet origin "HEAD:$BRANCH"; then
+              exit 0
+            fi
+            echo "push rejected, replaying the turn on the latest state ($attempt)"
+            sleep $((attempt * 2 + RANDOM % 4))
+          done
+          echo "could not push after 10 attempts" >&2
+          exit 1
+
+      - name: reply and close the issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RESULT_FILE: ${{ runner.temp }}/result.md
+        run: |
+          if [ ! -s "$RESULT_FILE" ]; then
+            printf '%s\n' "⚠️ Something went wrong while playing this turn. Please try again in a minute." > "$RESULT_FILE"
+          fi
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RESULT_FILE"
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"
