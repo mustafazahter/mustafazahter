@@ -71,19 +71,29 @@
 <!-- GAME:START -->
 <div align="center">
 
-<img src="game/board.svg?v=0" width="100%" alt="commit//strike">
+<img src="game/board.svg?v=0" width="100%" alt="chess board">
 
-<table>
-  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cleft&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° left"><kbd>&nbsp;↺&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfwd&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step forward"><kbd>&nbsp;⬆&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cright&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="turn 45° right"><kbd>&nbsp;↻&nbsp;</kbd></a></td></tr>
-  <tr><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-left&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe left"><kbd>&nbsp;⇠&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cback&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="step back"><kbd>&nbsp;⬇&nbsp;</kbd></a></td><td align="center"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cstrafe-right&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="strafe right"><kbd>&nbsp;⇢&nbsp;</kbd></a></td></tr>
-  <tr><td align="center" colspan="3"><a href="https://github.com/mustafazahter/mustafazahter/issues/new?title=strike%7Cfire&body=Just+press+%22Submit+new+issue%22.+The+bot+moves+the+striker+and+updates+the+board+in+~30s." title="fire"><kbd>&nbsp;🔫 FIRE&nbsp;</kbd></a></td></tr>
-</table>
-
-<sub><b>How it works:</b> click a key → GitHub opens a pre-filled issue → press <b>Submit new issue</b>. A GitHub Action plays your turn inside my contribution graph, my repos crawl closer, the board updates and your issue is closed (~30 s). +1 per action · +10 per merged repo · +30 for the exit portal.</sub>
-
-_No moves yet. The repos are waiting for you._
+<sub>You play <b>White</b> against <code>zahter.bot</code>. Click a move below, then press <b>Submit new issue</b>. The bot replies in about 30 seconds and the board updates for everyone.</sub>
 
 </div>
+
+<details open><summary><b>♙ your move — 20 legal moves</b> (click one)</summary>
+
+| piece | moves |
+|:--|:--|
+| ♘ `b1` | [`Na3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cb1a3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`Nc3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cb1c3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♘ `g1` | [`Nf3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cg1f3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`Nh3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cg1h3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `a2` | [`a3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ca2a3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`a4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ca2a4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `b2` | [`b3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cb2b3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`b4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cb2b4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `c2` | [`c3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cc2c3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`c4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cc2c4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `d2` | [`d3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cd2d3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`d4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cd2d4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `e2` | [`e3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ce2e3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`e4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ce2e4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `f2` | [`f3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cf2f3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`f4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cf2f4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `g2` | [`g3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cg2g3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`g4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Cg2g4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+| ♙ `h2` | [`h3`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ch2h3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) · [`h4`](https://github.com/mustafazahter/mustafazahter/issues/new?title=chess%7Cmove%7Ch2h4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20bot%20plays%20your%20move%2C%20answers%20as%20Black%20and%20updates%20the%20board%20in%20~30s.) |
+
+</details>
+
 <!-- GAME:END -->
 
 <div align="center">
