@@ -1,7 +1,7 @@
 {
  "game": "chess",
  "version": 1,
- "fen": "rnbqkbnr/ppp1pppp/8/8/3p4/P1N5/1PPPPPPP/R1BQKBNR w KQkq - 0 3",
+ "fen": "rnbqkb1r/ppp1pppp/5n2/8/3pN3/P7/1PPPPPPP/R1BQKBNR w KQkq - 2 4",
  "plies": [
   {
    "uci": "a2a3",
@@ -46,6 +46,28 @@
    "captured": null,
    "cap_sq": null,
    "castle": null
+  },
+  {
+   "uci": "c3e4",
+   "san": "Ne4",
+   "by": "mustafazahter",
+   "from": 18,
+   "to": 28,
+   "piece": "N",
+   "captured": null,
+   "cap_sq": null,
+   "castle": null
+  },
+  {
+   "uci": "g8f6",
+   "san": "Nf6",
+   "by": "zahter.bot",
+   "from": 62,
+   "to": 45,
+   "piece": "n",
+   "captured": null,
+   "cap_sq": null,
+   "castle": null
   }
  ],
  "game_no": 1,
@@ -58,15 +80,22 @@
    "points": 1
   },
   "mustafazahter": {
-   "moves": 1,
+   "moves": 2,
    "captures": 0,
    "checks": 0,
    "wins": 0,
-   "points": 1
+   "points": 2
   }
  },
  "results": [],
  "history": [
+  {
+   "user": "mustafazahter",
+   "white": "Ne4",
+   "black": "Nf6",
+   "n": 3,
+   "at": "11-12 17:38"
+  },
   {
    "user": "mustafazahter",
    "white": "Nc3",
@@ -85,10 +114,10 @@
  "last": {
   "user": "mustafazahter",
   "event": "move",
-  "white": "Nc3",
-  "black": "d4",
+  "white": "Ne4",
+  "black": "Nf6",
   "end": null
  },
- "eval": -40,
- "turns": 2
+ "eval": -55,
+ "turns": 3
 }
