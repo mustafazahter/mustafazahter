@@ -71,7 +71,7 @@
 <!-- GAME:START -->
 <div align="center">
 
-<img src="game/board.svg?v=1" width="100%" alt="chess board">
+<img src="https://raw.githubusercontent.com/mustafazahter/mustafazahter/cccc1cb3a4e45522d1275ce0405aafad2e90af4c/game/board.svg" width="100%" alt="chess board">
 
 <sub>You play <b>White</b> against <code>zahter.bot</code>. Click a move below, then press <b>Submit new issue</b>. The bot replies in about 30 seconds and the board updates for everyone.</sub>
 

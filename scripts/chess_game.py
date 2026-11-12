@@ -439,7 +439,12 @@ def issue_link(title):
 
 def readme_section(st):
     b = board_of(st)
-    out = ['<div align="center">', "", f'<img src="game/board.svg?v={st["turns"]}" width="100%" alt="chess board">', ""]
+    # Pin the image to the commit that holds this board: branch URLs (raw/main/...) are cached
+    # by GitHub for minutes even with a new ?v=, a commit URL can never serve an old board.
+    sha = os.environ.get("BOARD_SHA", "").strip()
+    src = (f"https://raw.githubusercontent.com/{REPO}/{sha}/game/board.svg" if re.fullmatch(r"[0-9a-f]{40}", sha)
+           else f"game/board.svg?v={st['turns']}")
+    out = ['<div align="center">', "", f'<img src="{src}" width="100%" alt="chess board">', ""]
     end = outcome_text(b)
     if end:
         out += [f"**🏁 {end[0]}** · [**♻ start game #{st['game_no'] + 1}**]({issue_link('chess|new')})", ""]
@@ -538,10 +543,13 @@ def main():
     g.add_argument("--init", action="store_true")
     g.add_argument("--play", action="store_true")
     g.add_argument("--selftest", action="store_true")
+    g.add_argument("--readme", action="store_true", help="only rewrite the README section (uses env BOARD_SHA)")
     a = ap.parse_args()
     p = paths()
     if a.selftest:
         return selftest()
+    if a.readme:
+        patch_readme(p, load(p)); return
     if a.init:
         st = new_state(); save(p, st); print("new game written"); return
     st = load(p)

@@ -43,12 +43,16 @@ jobs:
             git fetch --quiet origin "$BRANCH"
             git reset --quiet --hard "origin/$BRANCH"
             python scripts/chess_game.py --play
-            git add game README.md
+            git add game
             if git diff --cached --quiet; then
               echo "nothing to commit (illegal or unreadable move)"
               exit 0
             fi
             git commit --quiet -m "chess: move from issue #$ISSUE_NUMBER"
+            # point the README at this exact commit's board, so no cache can show an old one
+            BOARD_SHA="$(git rev-parse HEAD)" python scripts/chess_game.py --readme
+            git add README.md
+            git diff --cached --quiet || git commit --quiet -m "chess: show the board after issue #$ISSUE_NUMBER"
             if git push --quiet origin "HEAD:$BRANCH"; then
               exit 0
             fi
