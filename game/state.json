@@ -1,13 +1,58 @@
 {
  "game": "chess",
  "version": 1,
- "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
- "plies": [],
+ "fen": "rnbqkbnr/ppp1pppp/8/3p4/8/P7/1PPPPPPP/RNBQKBNR w KQkq - 0 2",
+ "plies": [
+  {
+   "uci": "a2a3",
+   "san": "a3",
+   "by": "huseyinsk",
+   "from": 8,
+   "to": 16,
+   "piece": "P",
+   "captured": null,
+   "cap_sq": null,
+   "castle": null
+  },
+  {
+   "uci": "d7d5",
+   "san": "d5",
+   "by": "zahter.bot",
+   "from": 51,
+   "to": 35,
+   "piece": "p",
+   "captured": null,
+   "cap_sq": null,
+   "castle": null
+  }
+ ],
  "game_no": 1,
- "players": {},
+ "players": {
+  "huseyinsk": {
+   "moves": 1,
+   "captures": 0,
+   "checks": 0,
+   "wins": 0,
+   "points": 1
+  }
+ },
  "results": [],
- "history": [],
- "last": null,
- "eval": 0,
- "turns": 0
+ "history": [
+  {
+   "user": "huseyinsk",
+   "white": "a3",
+   "black": "d5",
+   "n": 1,
+   "at": "11-12 17:27"
+  }
+ ],
+ "last": {
+  "user": "huseyinsk",
+  "event": "move",
+  "white": "a3",
+  "black": "d5",
+  "end": null
+ },
+ "eval": -50,
+ "turns": 1
 }
