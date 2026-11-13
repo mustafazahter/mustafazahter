@@ -19,19 +19,19 @@
 
 | state | repo | lang | commits (12 mo) | last push |
 |:-:|---|---|--:|--:|
-| ⚫ Z | [`hsd-mtu-site`](https://github.com/mustafazahter/hsd-mtu-site) | TypeScript | 66 | 204d22h ago |
-| ⚫ Z | [`VectorTwin`](https://github.com/mustafazahter/VectorTwin) | Python | 38 | 106d22h ago |
-| ⚫ Z | [`ai-cv-maker`](https://github.com/mustafazahter/ai-cv-maker) | TypeScript | 34 | 264d23h ago |
-| 🟡 S | [`c-sharp-oop-masterclass`](https://github.com/mustafazahter/c-sharp-oop-masterclass) | TypeScript | 15 | 62d02h ago |
-| 🟡 S | [`algo-lab`](https://github.com/mustafazahter/algo-lab) | JavaScript | 15 | 85d20h ago |
-| 🟢 R | [`mustafazahter`](https://github.com/mustafazahter/mustafazahter) | Python | 11 | 0h00m ago |
-| ⚫ Z | [`gomulu-sistemler-ve-pic-programlama`](https://github.com/mustafazahter/gomulu-sistemler-ve-pic-programlama) | TypeScript | 11 | 162d06h ago |
-| ⚫ Z | [`bilgisayar-mimarisi-notlari`](https://github.com/mustafazahter/bilgisayar-mimarisi-notlari) | HTML | 3 | 361d04h ago |
-| 🟡 S | [`komuta-n8n-template`](https://github.com/mustafazahter/komuta-n8n-template) | Dockerfile | 0 | 79d01h ago |
-| ⚫ Z | [`circor_proje`](https://github.com/mustafazahter/circor_proje) | Jupyter Notebook | 0 | 569d01h ago |
-| ⚫ Z | [`disease-diagnosis-with-heart-sound`](https://github.com/mustafazahter/disease-diagnosis-with-heart-sound) | Python | 0 | 572d21h ago |
-| ⚫ Z | [`deneme`](https://github.com/mustafazahter/deneme) | - | 0 | 951d08h ago |
-| ⚫ Z | [`android`](https://github.com/mustafazahter/android) | - | 0 | 3712d23h ago |
+| ⚫ Z | [`hsd-mtu-site`](https://github.com/mustafazahter/hsd-mtu-site) | TypeScript | 66 | 205d15h ago |
+| ⚫ Z | [`VectorTwin`](https://github.com/mustafazahter/VectorTwin) | Python | 38 | 107d16h ago |
+| ⚫ Z | [`ai-cv-maker`](https://github.com/mustafazahter/ai-cv-maker) | TypeScript | 34 | 265d16h ago |
+| 🟡 S | [`c-sharp-oop-masterclass`](https://github.com/mustafazahter/c-sharp-oop-masterclass) | TypeScript | 15 | 62d19h ago |
+| 🟡 S | [`algo-lab`](https://github.com/mustafazahter/algo-lab) | JavaScript | 15 | 86d13h ago |
+| 🟢 R | [`mustafazahter`](https://github.com/mustafazahter/mustafazahter) | Python | 11 | 17h20m ago |
+| ⚫ Z | [`gomulu-sistemler-ve-pic-programlama`](https://github.com/mustafazahter/gomulu-sistemler-ve-pic-programlama) | TypeScript | 11 | 162d23h ago |
+| ⚫ Z | [`bilgisayar-mimarisi-notlari`](https://github.com/mustafazahter/bilgisayar-mimarisi-notlari) | HTML | 3 | 361d21h ago |
+| 🟡 S | [`komuta-n8n-template`](https://github.com/mustafazahter/komuta-n8n-template) | Dockerfile | 0 | 79d18h ago |
+| ⚫ Z | [`circor_proje`](https://github.com/mustafazahter/circor_proje) | Jupyter Notebook | 0 | 569d19h ago |
+| ⚫ Z | [`disease-diagnosis-with-heart-sound`](https://github.com/mustafazahter/disease-diagnosis-with-heart-sound) | Python | 0 | 573d15h ago |
+| ⚫ Z | [`deneme`](https://github.com/mustafazahter/deneme) | - | 0 | 952d02h ago |
+| ⚫ Z | [`android`](https://github.com/mustafazahter/android) | - | 0 | 3713d16h ago |
 
 </details>
 <!-- PROCS:END -->
